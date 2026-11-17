@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran | Alfarizi</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">ALFARIZI</a>
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <a class="nav-button" href="profil.html">Profil</a>
+      <a class="nav-button active" href="pendaftaran.html">Pendaftaran</a>
+      <div class="menu-wrap">
+        <button class="nav-button menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="dropdownMenu">Menu</button>
+        <div class="dropdown" id="dropdownMenu">
+          <a href="index.html">Beranda</a>
+          <a href="profil.html">Lihat Profil</a>
+          <a href="pendaftaran.html">Formulir Pendaftaran</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-content registration-page">
+    <section class="form-card registration-card">
+      <p class="eyebrow">FORMULIR</p>
+      <h1>Pendaftaran</h1>
+      <p class="form-intro">Lengkapi informasi di bawah ini untuk melakukan pendaftaran.</p>
+
+      <form id="registrationForm" class="registration-form">
+        <div class="registration-grid">
+          <!-- Kolom kiri -->
+          <div class="form-column">
+            <div class="form-field">
+              <label for="nama">Nama Lengkap</label>
+              <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" autocomplete="name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="contoh@email.com" autocomplete="email" required>
+            </div>
+
+            <div class="form-field">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Minimal 8 karakter" autocomplete="new-password" minlength="8" required>
+              <small class="field-hint">Password minimal terdiri dari 8 karakter.</small>
+            </div>
+          </div>
+
+          <!-- Kolom kanan -->
+          <div class="form-column">
+            <div class="form-field">
+              <label for="tanggalLahir">Tanggal Lahir</label>
+              <input type="date" id="tanggalLahir" name="tanggalLahir" autocomplete="bday" required>
+            </div>
+
+            <div class="form-field">
+              <label for="jurusan">Pilih Jurusan</label>
+              <select id="jurusan" name="jurusan" required>
+                <option value="" disabled selected>-- Pilih jurusan --</option>
+                <option value="PPLG">PPLG</option>
+                <option value="TJKT">TJKT</option>
+                <option value="DKV">DKV</option>
+                <option value="AKL">Akuntansi dan Keuangan Lembaga</option>
+                <option value="MPLB">Manajemen Perkantoran dan Layanan Bisnis</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="alamat">Alamat</label>
+              <textarea id="alamat" name="alamat" rows="5" placeholder="Masukkan alamat lengkap" autocomplete="street-address" required></textarea>
+            </div>
+          </div>
+
+          <!-- Pilihan minat dan keahlian -->
+          <fieldset class="interest-fieldset">
+            <legend>Minat dan Keahlian</legend>
+            <p class="interest-description">Pilih bidang yang kamu minati. Kamu boleh memilih lebih dari satu.</p>
+            <div class="interest-options">
+              <label class="interest-option">
+                <input type="checkbox" name="minat" value="Web Development">
+                <span class="checkmark" aria-hidden="true"></span>
+                <span class="interest-copy">
+                  <strong>Web Development</strong>
+                  <small>Pembuatan website dan aplikasi web.</small>
+                </span>
+              </label>
+
+              <label class="interest-option">
+                <input type="checkbox" name="minat" value="Game Development">
+                <span class="checkmark" aria-hidden="true"></span>
+                <span class="interest-copy">
+                  <strong>Game Development</strong>
+                  <small>Pembuatan game dan mekanisme permainan.</small>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-actions">
+          <button class="primary-button submit-button" type="submit">Daftar Sekarang</button>
+          <button class="secondary-button reset-button" type="reset">Reset Form</button>
+        </div>
+      </form>
+
+      <p class="form-status" id="formStatus" aria-live="polite"></p>
+      <p class="form-note">Catatan: formulir ini masih berupa demo dan belum mengirim atau menyimpan data ke server.</p>
+    </section>
+  </main>
+
+  <footer class="footer">© 2026 Alfarizi</footer>
+</body>
+</html>
